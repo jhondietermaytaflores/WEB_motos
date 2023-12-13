@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+
+    min-height: 100vh;
+    background: linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(0, 0%, 0%, 0.664)), url(../img2/hermoso-paisaje-montana-cielo-estrellado.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* INICIO NAVBAR ESTAT */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 1.3rem 10%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,.1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+  }
+  
+  .header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,2555,.4),transparent);
+    transition: .5s;
+  }
+  .header:hover::after{
+    left: 100%;
+  }
+  
+  
+  #logo{      
+      width: 250px;
+      height: 80px;  
+  }
+  .navbar a
+    {font-size: 1.15rem;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  .icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+
+/* FIN navbar*/
+
+/*INICIO MEDIA HEADER1*/
+
+@media(max-width: 992px){
+    .header{
+      padding: 1.3rem 5%;
+    }
+  
+  }
+  @media(max-width: 768px){
+    .icons{
+      display: inline-flex;
+    }
+  
+    #check:checked~.icons #menu-icon{
+      display: none;
+    }
+    .icons #close-icon{
+      display: none;
+    }
+    #check:checked~.icons #close-icon{
+      display: block;
+    }
+  
+    .navbar{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(0,0,0,.1);
+      backdrop-filter: blur(50px);
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+      overflow: hidden;
+      transition: .3s ease;
+    }
+  
+    #check:checked~.navbar{
+      height: 17.7rem;
+    }
+  
+    .navbar a{
+      display: block;
+      font-size: 1.1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+      transform: translateY(-50px);
+      opacity: 0;
+      transition: .3s ease;
+    }
+    #check:checked~.navbar a{
+      transform: translateY(0);
+      opacity: 1;
+      transition-delay: calc(.15s* var(--i));
+    }
+  }
+
+/*FIN MEDIA HEADER1*/
+
+/* footer */
+
+footer{
+    background: linear-gradient(rgb(13, 1, 26),rgb(0, 0, 0));
+    padding: 60px 0 30px 0;
+    /* margin: 0; */
+    overflow: hidden;
+
+    margin-top: auto;
+    
+
+}
+
+.contenedor-footer{
+    display: table-row;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+/*fin footer*/

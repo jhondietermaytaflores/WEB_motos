@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sport Bikes</title>
+    <link rel="shortcut icon" href="img/log_moto.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estil.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section>
+        <header class="header">
+            <a href="#" ><img id="logo" src="img2/Captura1.PNG" alt="logo"></a>
+            <input type="checkbox" id="check">
+            <label for="check" class="icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i> 
+            </label>
+
+            <nav class="navbar">
+                <a href="index.html" style="--i:0;">Inicio</a>
+                <a href="#acercaDe" style="--i:1;">Acerca de</a>
+                <a href="#portafolio" style="--i:2;">Portafolio</a>
+                <a href="#servicios" style="--i:3;">Servicios</a>
+            </nav>
+        </header>
+    </section>
+    
+    <main>
+        
+        
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Telefóno</h4>
+                <p>69696805</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>sportbikes@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Dirección</h4>
+                <p>Sucre,Bolivia</p>
+            </div>
+            <div class="content-foo">
+                <h4>Redes sociales</h4>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>        
+    </footer>
+
+    <script>
+        
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); 
+                const targetId = this.getAttribute('href').substring(1); 
+                const targetElement = document.getElementById(targetId);     
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' }); 
+                }
+            });
+        });
+    </script>
+    
+</body>
+
+</html>

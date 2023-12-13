@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Sport Bikes</title>
+		<link rel="icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<header>
+			<div id="header" class="header container">
+				<h1 class="logo">Sport Bikes</h1>
+
+				<nav>
+					<ul class="menu-nav">
+						<li><a href="/index.html">Inicio</a></li>
+						<li><a href="/index.html">Acerca de Nosotros</a></li>
+						<li><a href="/index.html">Portafolio</a></li>
+						<li><a href="/index.html">Servicios</a></li>
+						<li><a href="/iniciarSecion.html">Iniciar sesión</a></li>
+					</ul>
+				</nav>
+
+				<div class="menu-hamburger">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+
+				<div class="carrito" onclick="mostrarCarrito()">
+					<img src="cart.svg" alt="" />
+					<div class="count-products-cart">0</div>
+
+                    <div class="carrito-compras" style="display: none;">
+                        <h2>Carrito de Compras</h2>
+                        <table id="tabla-carrito">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio por U/</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpo-tabla-carrito">
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">Total Carrito:</td>
+                                    <td id="total-carrito">$0.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+				</div>
+
+                
+                
+			</div>
+
+            
+
+
+			<div class="menu-responsive">
+				<h1 class="logo-responsive">Sport Bikes</h1>
+				<p style="color: white;">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					Possimus, eum. Numquam, sapiente nemo.
+				</p>
+				<div class="container-social-responsive" >
+					<a href="#" class="facebook" >
+						<i class="fa-brands fa-facebook"></i>
+					</a>
+					<a href="#" class="youtube">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+					<a href="#" class="telegram">
+						<i class="fa-brands fa-telegram"></i>
+					</a>
+					<a href="#" class="twitter">
+						<i class="fa-brands fa-twitter"></i>
+					</a>
+				</div>
+				<nav>
+					<ul class="menu-nav-responsive">
+						<li><a href="/index.html">Inicio</a></li>
+						<li><a href="/index.html">Acerca de Nosotros</a></li>
+						<li><a href="/index.html">Portafolio</a></li>
+						<li><a href="/index.html">Servicios</a></li>
+						<li><a href="/iniciarSecion.html">Iniciar sesión</a></li>
+					</ul>
+				</nav>
+				<div class="btn-close-responsive">
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+			</div>
+			<div id="overlay"></div>
+		</header>
+
+		<main class="container">
+			<div class="grid-images">
+				<div class="imagen-producto image-1 imagen-hover">
+					<img src="img/200-Duke-2022.png" alt="Imagen Producto 1" />
+				</div>
+				<div class="imagen-producto image-2 imagen-hover">
+					<img src="img/250-Duke-2022.png" alt="Imagen Producto 2" />
+				</div>
+				<div class="imagen-producto image-3 imagen-hover">
+					<img src="img/390-DUKE_2023.png" alt="Imagen Producto 3" />
+				</div>
+				<div class="imagen-producto image-4 imagen-hover">
+					<img src="img/390-ADVENTURE_2023.png" alt="Imagen Producto 4" />
+				</div>
+
+                <div class="imagen-producto image-5 imagen-hover">
+					<img src="img/1290-duke-2023.png" alt="Imagen Producto 1" />
+				</div>
+				<div class="imagen-producto image-6 imagen-hover">
+					<img src="img/890-duke-2023.png" alt="Imagen Producto 2" />
+				</div>
+
+				<div class="modal">
+					<span class="cerrar">&times;</span>
+					<img class="modal-imagen" alt="Imagen Ampliada" />
+				</div>
+			</div>
+			
+			
+
+			<!-- Productos Detalles -->
+			<div class="container-details-product">
+				<div class="aside-details-product">
+					<div class="header-details-product">
+                        <div id="NOMBRE_Produc" class="product-name">Catálogo de motos KTM</div>
+						<!-- <h2 id="NOMBRE_Produc" >Heavy Weight Hoodie</h2> -->
+						<div class="row">
+							<div class="calification">
+								<i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+								<p>4.9 -<span> 142 reseñas</span></p>
+							</div>
+							<div class="share">
+								<button class="btn">
+									<i class="fa-solid fa-arrow-up-from-bracket"></i>
+									<p>Compartir</p>
+								</button>
+								<button class="btn">
+									<i class="fa-regular fa-heart"></i>
+									<p>Guardar</p>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="info-details-product">
+						<div class="container-acordeon">
+							<button class="acordeon-button active">
+								Descripción
+								<i class="fa-solid fa-plus"></i>
+							</button>
+							<div class="acordeon-content">
+								<p>
+									Descubre la pasión y la potencia en cada detalle. 
+									<br>Nuestro catálogo de motocicletas KTM te lleva al corazón de la</br> velocidad, la innovación y el rendimiento. Desde las pistas de competición hasta las aventuras en carretera, cada modelo encarna la excelencia técnica, la ingeniería de vanguardia y el diseño dinámico que define a la marca KTM. Explora una gama diversa que abarca desde las motos de cross y enduro hasta las motos de calle y aventura, fusionando tecnología de vanguardia con una experiencia de conducción inigualable. Sumérgete en la adrenalina y el espíritu aventurero que solo una moto KTM puede ofrecer.
+								</p>
+							</div>
+						</div>
+						<div class="container-acordeon">
+							<button class="acordeon-button">
+								Características
+								<i class="fa-solid fa-plus"></i>
+							</button>
+							<div class="acordeon-content">
+								<ul>
+									<li> <h3>Motor de Alto Rendimiento:</h3> Motores potentes y eficientes, algunos con tecnología de vanguardia, como inyección de combustible, para un rendimiento óptimo en diferentes terrenos y condiciones.</li>
+									<li>
+										<h3>Chasis Ligero y Robusto:</h3> Diseños de chasis avanzados que combinan resistencia y ligereza para un manejo ágil y preciso.
+									</li>
+									<li><h3>Diseño Ergonómico:</h3> Ergonomía pensada para proporcionar comodidad al conductor durante largos trayectos y mejorar la maniobrabilidad en distintas situaciones.</li>
+									<li><h3>Tecnología Avanzada:</h3> Incorporación de sistemas electrónicos avanzados, como modos de conducción seleccionables, sistemas de frenado ABS y control de tracción para una experiencia de conducción más segura y personalizada.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="container-acordeon">
+							<button class="acordeon-button">
+								¿Dondé Comprar?
+								<i class="fa-solid fa-plus"></i>
+							</button>
+							<div class="acordeon-content">
+								<div id="map"></div>
+							</div>
+						</div>
+						<div class="container-acordeon">
+							<button class="acordeon-button">
+								Preguntas Frecuentes
+								<i class="fa-solid fa-plus"></i>
+							</button>
+							<div class="acordeon-content">
+								<ul>
+									<li>
+										All full-priced, unworn items, with tags attached
+										and in their original packaging are eligible for
+										return or exchange within 30 days of placing your
+										order.
+									</li>
+									<li>
+										Please note, packs must be returned in full. We do
+										not accept partial returns of packs.
+									</li>
+									<li>
+										Want to know our full returns policies? Here you
+										go.
+									</li>
+									<li>
+										Want more info about shipping, materials or care
+										instructions? Here!
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="body-details-product">
+						<div class="info-product">
+							<h2>Detalles del Producto</h2>
+							<div class="info">
+								<p>
+									Descubre la innovación patentada en cada detalle de las motos KTM.
+									Con tecnología de vanguardia y un diseño excepcional, estas motocicletas
+									están construidas para ofrecer la máxima resistencia y rendimiento.
+								</p>
+								<p>
+									La historia de las motos KTM se remonta a su fundación por Hans Trunkenpolz
+									en 1934. Desde entonces, KTM ha liderado el mercado de motocicletas de alto
+									rendimiento, destacándose por su ingeniería de precisión y su participación
+									exitosa en competiciones de todo terreno.
+								</p>
+								<ul>
+									<li>Diseño ergonómico para una experiencia de conducción óptima</li>
+									<li>Tecnología de motores avanzada para un rendimiento excepcional</li>
+									<li>Chasis robustos y livianos para un manejo ágil y preciso</li>
+									<li>Innovación en cada componente, garantizando calidad y durabilidad</li>
+								</ul>
+							</div>
+							
+							<div class="features-product">
+								<div class="feature-product shipping">
+									<i class="fa-solid fa-truck-fast"></i>
+									<h4>Envío gratis</h4>
+									<p>En pedidos superiores a $50.00</p>
+								</div>
+								<div class="feature-product return">
+									<i class="fa-solid fa-phone-volume"></i>
+									<h4>Muy fácil de hacer una devolución</h4>
+									<p>Un Sólo número de teléfono. (Revisar la seccion de Contactenos)</p>
+								</div>
+								<div class="feature-product delivery">
+									<i class="fa-solid fa-globe"></i>
+									<h4>Entrega a nivel nacional</h4>
+									<p>Entrega rápida a todo el país.</p>
+								</div>
+								<div class="feature-product refund">
+									<i class="fa-solid fa-money-bill-transfer"></i>
+									<h4>Política de reembolsos</h4>
+									<p>60 días de devolución por cualquier motivo.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-card-payment">
+					<div class="card-payment">
+						<div class="header">
+                            <p class="price">Precio: $<span class="price-value">2500.00</span></p>
+							<!-- <p class="price">$108.00</p> -->
+							<p class="count-reviews">
+								<i class="fa-solid fa-star"></i>
+								4.9 -
+								<span>142 reseñas</span>
+							</p>
+						</div>
+						<div class="colors">
+							<p>Color: <span id="value-color">Negro</span></p>
+							<div class="row-colors">
+								<div
+									class="container-color color-black selected"
+									data-color="negro"
+								></div>
+								<div
+									class="container-color color-white"
+									data-color="blanco"
+								></div>
+								<div
+									class="container-color color-orange"
+									data-color="Naranja"
+								></div>
+								<div
+									class="container-color color-blue"
+									data-color="Celeste"
+								></div>
+								<div
+									class="container-color color-brown"
+									data-color="marrón"
+								></div>
+							</div>
+						</div>
+						<div class="sizes">
+							<p>Escoja el Modelo: <span id="value-size">XDuke ktm 200cc</span></p>
+							<div class="container-sizes">
+								<button id="btn1" class="btn-size selected">Duke ktm 200cc</button>
+								<button id="btn2" class="btn-size">Duke ktm 250cc</button>
+								<button id="btn3" class="btn-size">Duke ktm 390cc</button>
+								<button id="btn4" class="btn-size">Duke Racing 200c</button>
+								<button id="btn5" class="btn-size">Duke ktm Adventure 400cc</button>
+								<button id="btn6" class="btn-size">Duke ktm Adventure 690cc</button>
+								<button id="btn7" class="btn-size">Duke ktm Adventure 1000cc</button>
+							</div>
+						</div>
+						<div class="quantity">
+							<div class="container-add-quantity">
+								<div class="add-quantity">
+									<button class="btn-minus" id="btn-decrement">
+										<i class="fa-solid fa-minus"></i>
+									</button>
+									<span id="count-product">1</span>
+									<button class="btn-plus" id="btn-increment">
+										<i class="fa-solid fa-plus"></i>
+									</button>
+								</div>
+								<button class="btn-add-to-cart">
+									<i class="fa-solid fa-bag-shopping"></i>
+									Añadir al Carrito
+								</button>
+							</div>
+							<div class="info-quantity">
+								<div class="price-tax">
+									<p>
+										$2500.00 x <span id="quantity-product">1</span>
+									</p>
+									<p>Impuesto estimado</p>
+								</div>
+								<div class="value">
+									<p>108.00</p>
+									<p>$0</p>
+								</div>
+							</div>
+						</div>
+						<div class="total">
+							<span>Total</span>
+							<div class="price-total">108.00</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section-reviews">
+				<h2><i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i> 4.87 - 142 reseñas</h2>
+				<div class="container-reviews">
+					<div class="container-review">
+						<div class="header-review">
+							<img src="img/user-1.jpg" alt="Usuario 1" />
+							<div class="name-user-review">
+								<p>Cody Fisher</p>
+								<span>20 de Mayo, 2023</span>
+							</div>
+							<div class="stars-review">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+						</div>
+						<p>
+							La moto KTM que compré ha superado todas mis expectativas. Su rendimiento, diseño y agilidad son simplemente extraordinarios. ¡Una compra que ha llevado mi pasión por las motos a un nuevo nivel!
+						</p>
+					</div>
+					<div class="container-review">
+						<div class="header-review">
+							<img src="img/user-2.jpg" alt="Usuario 2" />
+							<div class="name-user-review">
+								<p>Stiven Hokinhs</p>
+								<span>20 de Mayo, 2023</span>
+							</div>
+							<div class="stars-review">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+						</div>
+						<p>
+							La moto KTM que compré ha superado todas mis expectativas. Su rendimiento, diseño y agilidad son simplemente extraordinarios. ¡Una compra que ha llevado mi pasión por las motos a un nuevo nivel!
+						</p>
+					</div>
+					<div class="container-review">
+						<div class="header-review">
+							<img src="img/user-3.jpg" alt="Usuario 3" />
+							<div class="name-user-review">
+								<p>Gropishta keo</p>
+								<span>15 de Agosto, 2022</span>
+							</div>
+							<div class="stars-review">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+						</div>
+						<p>
+							La moto KTM que compré ha superado todas mis expectativas. Su rendimiento, diseño y agilidad son simplemente extraordinarios. ¡Una compra que ha llevado mi pasión por las motos a un nuevo nivel!
+						</p>
+					</div>
+					<div class="container-review">
+						<div class="header-review">
+							<img src="img/user-4.jpg" alt="Usuario 4" />
+							<div class="name-user-review">
+								<p>Dahon Stiven</p>
+								<span>12 de Diciembre, 2022</span>
+							</div>
+							<div class="stars-review">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+						</div>
+						<p>
+							La moto KTM que compré ha superado todas mis expectativas. Su rendimiento, diseño y agilidad son simplemente extraordinarios. ¡Una compra que ha llevado mi pasión por las motos a un nuevo nivel!
+						</p>
+					</div>
+				</div>
+				<button class="btn-show-reviews">
+					Mostrar todas las reseñas
+				</button>
+			</div>
+		</main>
+
+		<section class="container container-productos-relacionados">
+			<h2>Los clientes también compraron</h2>
+			<div class="cards-productos-relacionados">
+				<div class="card-producto-relacionado">
+					<div class="image-product">
+						<img
+							src="img/250-Duke-2022.png"
+							alt="Producto Relacionado 1"
+						/>
+						<div class="button-group">
+							<button class="btn-add-to-bag">
+								<i class="fa-solid fa-bag-shopping"></i>
+								Añadir a la cesta
+							</button>
+
+							<button class="btn-quick-view">
+								<i class="fa-solid fa-magnifying-glass"></i>
+								Vista previa
+							</button>
+						</div>
+					</div>
+					<div class="info-product">
+						<div class="container-title">
+							<h4>Ktm Duke 200cc ABS (2023)</h4>
+							<p>Matte Black</p>
+						</div>
+						<div class="container-price">
+							<span>$5500.00</span>
+
+							<p><i class="fa-solid fa-star"></i> 4.4 (61 reseñas)</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-producto-relacionado">
+					<div class="image-product">
+						<img
+							src="img/250-Duke-2022.png"
+							alt="Producto Relacionado 2"
+						/>
+						<div class="button-group">
+							<button class="btn-add-to-bag">
+								<i class="fa-solid fa-bag-shopping"></i>
+								Añadir a la cesta
+							</button>
+
+							<button class="btn-quick-view">
+								<i class="fa-solid fa-magnifying-glass"></i>
+								Vista previa
+							</button>
+						</div>
+					</div>
+					<div class="info-product">
+						<div class="container-title">
+							<h4>Ktm Duke 250cc ABS (2023)</h4>
+							<p>Matte Black</p>
+						</div>
+						<div class="container-price">
+							<span>$5500.00</span>
+
+							<p><i class="fa-solid fa-star"></i> 4.4 (61 reseñas)</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-producto-relacionado">
+					<div class="image-product">
+						<img
+							src="img/390-DUKE_2023.png"
+							alt="Producto Relacionado 3"
+						/>
+						<div class="button-group">
+							<button class="btn-add-to-bag">
+								<i class="fa-solid fa-bag-shopping"></i>
+								Añadir a la cesta
+							</button>
+
+							<button class="btn-quick-view">
+								<i class="fa-solid fa-magnifying-glass"></i>
+								Vista previa
+							</button>
+						</div>
+					</div>
+					<div class="info-product">
+						<div class="container-title">
+							<h4>Ktm Duke 390cc ABS (2023)</h4>
+							<p>Matte Black</p>
+						</div>
+						<div class="container-price">
+							<span>$3500.00</span>
+
+							<p><i class="fa-solid fa-star"></i> 4.4 (61 reseñas)</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-producto-relacionado">
+					<div class="image-product">
+						<img
+							src="img/390_ADVENTURE_2023.png"
+							alt="Producto Relacionado 4"
+						/>
+						<div class="button-group">
+							<button class="btn-add-to-bag">
+								<i class="fa-solid fa-bag-shopping"></i>
+								Añadir a la cesta
+							</button>
+
+							<button class="btn-quick-view">
+								<i class="fa-solid fa-magnifying-glass"></i>
+								Vista previa
+							</button>
+						</div>
+					</div>
+					<div class="info-product">
+						<div class="container-title">
+							<h4>Ktm 390cc Adventure</h4>
+							<p>Matte Black</p>
+						</div>
+						<div class="container-price">
+							<span>$3500.00</span>
+
+							<p><i class="fa-solid fa-star"></i> 4.4 (61 reseñas)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+
+		<script src="index.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj9F1kSRLYj5Iog-de4Di4Qz0VjSHkTTg&amp;libraries=places" async defer></script>
+
+		<script>
+    		function initMap() {
+      		// Coordenadas
+			var ubicacion = { lat: -19.0333200, lng: -65.2627400 };
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+        		zoom: 12, 
+        		center: ubicacion 
+    		});
+
+        var marker = new google.maps.Marker({
+        position: ubicacion,
+        map: map,
+        title: 'Mi ubicación actual'
+        });
+        }
+        </script>
+
+        <script>
+
+        function actualizarTablaCarrito() {
+            const cuerpoTabla = document.querySelector('#cuerpo-tabla-carrito tbody');
+    cuerpoTabla.innerHTML = ''; 
+
+    let totalCarrito = 0;
+
+    // Recorrer
+    Object.keys(carrito).forEach((producto) => {
+        const fila = document.createElement('tr');
+
+        const columnaProducto = document.createElement('td');
+        columnaProducto.textContent = producto;
+
+        const cantidad = carrito[producto].cantidad;
+        const precioUnitario = carrito[producto].precio;
+
+        const columnaCantidad = document.createElement('td');
+        columnaCantidad.textContent = cantidad;
+
+        const columnaPrecio = document.createElement('td');
+        columnaPrecio.textContent = `$${precioUnitario}.00`;
+
+        const totalProducto = cantidad * precioUnitario;
+        const columnaTotal = document.createElement('td');
+        columnaTotal.textContent = `$${totalProducto}.00`;
+
+        fila.appendChild(columnaProducto);
+        fila.appendChild(columnaCantidad);
+        fila.appendChild(columnaPrecio);
+        fila.appendChild(columnaTotal);
+
+        cuerpoTabla.appendChild(fila);
+
+        totalCarrito += totalProducto;
+    });
+
+    //total del carrito
+    const totalCarritoElement = document.getElementById('total-carrito');
+    totalCarritoElement.textContent = `$${totalCarrito}.00`;
+        }
+
+            document.addEventListener('DOMContentLoaded', (event) => {               
+                actualizarTablaCarrito(); 
+            });
+        </script>
+	</body>
+</html>
